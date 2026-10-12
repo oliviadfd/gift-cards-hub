@@ -1,0 +1,420 @@
+/* style.css — styles for the supplied index.html.
+   Remove the original <style>...</style> block, then add this inside <head>:
+   <link rel="stylesheet" href="style.css">
+   Roboto is optional; the stylesheet works without an external font service.
+   Existing JavaScript controls modal visibility and progress animations.
+*/
+body {
+	font-family: 'Roboto', sans-serif;
+	color:#94929b;
+	font-size:24px;
+	background:#211838;	
+}
+
+.general {
+	width:100%;
+	height:100%;
+	top:0;
+	text-align:center;
+}
+
+.dark {
+	width:100%;
+	height:100%;
+	top:0;
+	background-color: rgba(0, 0, 0, 0.8);
+	position:fixed;
+	padding:0;
+	margin:0 auto;
+	left:0;
+	text-align:center;
+	opacity:0;
+	z-index:-10;
+}
+
+.popin {
+	margin:180px auto 0;
+	width:600px;
+	background-color:#FFFFFF;
+	padding:10px;
+	border-radius:25px;
+	color:#c3c3c3;	
+	text-align:center;
+}
+
+.bar {
+	width:100%;
+	max-width:400px;
+	min-width:260px;
+	background-color:#c3c3c3;
+	border-radius:5px;
+	margin:50px auto;
+	position:relative;
+	height:10px;	
+}
+
+.advance {
+	width:0;
+	max-width:390px;
+	height:4px;
+	background-color:#FFCC00;
+	border-radius:3px;
+	position:absolute;
+	z-index:200;
+	top:3px;
+	left:5px;
+}
+
+.advanced {
+	width:0;
+	max-width:390px;
+	height:4px;
+	background-color:#FFCC00;
+	border-radius:3px;
+	position:absolute;
+	z-index:200;
+	top:3px;
+	left:50%;
+}
+
+
+.round1 {
+	border-radius:25px;
+	width:20px;
+	height:20px;
+	background-color:#c3c3c3;
+	position:absolute;
+	z-index:100;
+	top:-5px;
+	left:0;
+}
+
+.advance1 {
+	border-radius:25px;
+	width:0;
+	height:0;
+	background-color:#ffcc00;
+	position:absolute;
+	z-index:100;
+	top:-1px;
+	left:4px;
+}
+
+.round2 {
+	border-radius:25px;
+	width:20px;
+	height:20px;
+	background-color:#c3c3c3;
+	left:50%;
+	margin-left:-10px;
+	top:-5px;
+	position:absolute;
+	z-index:100;	
+}
+
+.advance2 {
+	border-radius:25px;
+	width:0;
+	height:0;
+	background-color:#ffcc00;
+	position:absolute;
+	z-index:100;
+	top:-1px;
+	left:50%;
+	margin-left:-6px;
+}
+
+.round3 {
+	border-radius:25px;
+	width:20px;
+	height:20px;
+	background-color:#c3c3c3;
+	right:0;
+	position:absolute;
+	z-index:100;
+	top:-5px;
+}
+
+.advance3 {
+	border-radius:25px;
+	width:0;
+	height:0;
+	background-color:#ffcc00;
+	position:absolute;
+	z-index:100;
+	top:-1px;
+	right:4px;
+}
+
+.system {
+	margin-top:20px;
+	opacity:0;
+	line-height:25px;
+	height:40px;
+}
+
+.content {
+	width:1000px;
+	padding:60px 19px;	
+	text-align:center;
+	margin:0 auto;
+}
+
+h1, h2 {
+	font-size:36px;
+	color:#FFFFFF;
+	font-weight:bolder;	
+	text-shadow: 7px 7px #0e081e;
+}
+
+h1 span, h2 span {
+	text-transform:uppercase;
+	color:#FFCC00;
+}
+
+h3 {
+	color:#333333;
+	text-transform:uppercase;
+	font-size:30px;	
+}
+
+.card {
+	padding-right:17px;
+	padding-bottom:17px;
+	display:inline-block;	
+}
+
+.last {
+	padding-right:0;
+}
+
+.screen {
+	display:none;
+	padding:0 0 50px;
+	opacity:0;	
+}
+
+button {
+	border:0;
+	padding:15px 20px;
+	font-size:16px;
+	font-weight:bold;
+	background-color:#FF0000;
+	color:#FFFFFF;
+	text-transform:uppercase;
+	border-radius: 10px;
+	margin-bottom:25px;
+	cursor:pointer;
+}
+
+#result {
+	opacity:0;
+	display:none;	
+}
+
+.numbers {
+	font-size:30px;
+	color:#211838;
+	font-weight:bold;	
+	padding-bottom:20px;
+}
+
+@media screen and (max-width: 768px) {
+	.content {
+		width:90%;
+		padding:30px 5%;	
+	}
+	.last {
+		padding-right:17px;
+	}
+	
+	.logo {
+		width:100%;
+		height:auto;
+		max-width:418px;
+		margin:0 auto;	
+	}
+	
+	.popin {
+		margin:25px auto 0;
+		width:80%;
+	}
+	
+	.bar {
+		width:80%;
+	}
+	
+	.numbers {
+		font-size:20px;	
+		padding-bottom:20px;
+	}
+}
+
+/* Layout and accessibility improvements; existing class names are preserved. */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+html {
+  min-height: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  min-width: 280px;
+  min-height: 100vh;
+  margin: 0;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+}
+.general {
+  min-height: 100vh;
+}
+.content {
+  width: 100%;
+  max-width: 1040px;
+  padding: 60px 20px;
+}
+.logo {
+  display: block;
+  width: 500px;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto 24px;
+}
+h1, h2 {
+  margin: 24px 0 16px;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+h3 {
+  margin: 0;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+p {
+  margin: 0 0 28px;
+}
+.card {
+  width: calc(100% / 7);
+  padding: 0 8px 17px;
+  vertical-align: top;
+  /* The uploaded HTML has no spaces between some cards. */
+  margin-left: -3px;
+}
+.card.last {
+  padding-right: 8px;
+}
+.card a {
+  display: block;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: transform 180ms ease;
+}
+.card a:hover {
+  transform: translateY(-4px);
+}
+.card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 0;
+}
+a:focus-visible, button:focus-visible {
+  outline: 3px solid #ffcc00;
+  outline-offset: 5px;
+}
+button {
+  max-width: 100%;
+  white-space: normal;
+  line-height: 1.4;
+  transition: filter 180ms ease;
+}
+button:hover {
+  filter: brightness(0.9);
+}
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+.dark {
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 24px 16px;
+}
+.popin {
+  width: 100%;
+  max-width: 620px;
+  margin: 120px auto 24px;
+  padding: 24px;
+}
+.system {
+  height: auto;
+  min-height: 40px;
+  margin-top: 20px;
+}
+.bar {
+  width: 100%;
+  max-width: 400px;
+  min-width: 0;
+  margin: 42px auto;
+}
+.screen {
+  padding: 0 0 30px;
+  overflow-wrap: anywhere;
+}
+.screen img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+.numbers {
+  font-size: 30px;
+  font-family: ui-monospace, Consolas, monospace;
+  overflow-wrap: anywhere;
+}
+.txftr {
+  width: 100%;
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 20px;
+  font-size: 13px;
+  line-height: 1.7;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+@media (max-width: 1000px) {
+  .card { width: calc(100% / 5); }
+}
+@media (max-width: 768px) {
+  body { font-size: 18px; }
+  .content { width: 100%; padding: 32px 16px; }
+  .logo { width: 100%; max-width: 418px; }
+  h1, h2 { font-size: 30px; text-shadow: 3px 3px #0e081e; }
+  h3 { font-size: 24px; }
+  .card { width: calc(100% / 3); padding: 0 6px 14px; }
+  .card.last { padding-right: 6px; }
+  .popin { width: 100%; margin: 24px auto; padding: 22px 18px; border-radius: 16px; }
+  .bar { width: 100%; }
+  .numbers { font-size: 20px; padding-bottom: 20px; }
+}
+@media (max-width: 480px) {
+  .content { padding: 24px 12px; }
+  .card { width: 50%; margin-left: -3px; }
+  h1, h2 { font-size: 26px; }
+  h3 { font-size: 22px; }
+  .dark { padding: 12px; }
+  .popin { padding: 20px 16px; }
+  .numbers { font-size: 18px; }
+  .txftr { font-size: 12px; padding: 16px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .card a:hover { transform: none; }
+}
